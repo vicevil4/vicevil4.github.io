@@ -36,11 +36,14 @@ eval "$(rbenv init -)"
 # download jekyll in root directory
 > cd /path/to/repository
 > gem install jekyll
+> gem install github-pages
 
 # install default bundle
 > rm -rf index.html
 > jekyll new ./ --force
 > bundle install
+
+# run local server
 > bundle exec jekyll serve
 Configuration file: /Users/aincc/Works/vicevil4/vicevil4.github.io/_config.yml
             Source: /Users/aincc/Works/vicevil4/vicevil4.github.io
@@ -54,8 +57,31 @@ Configuration file: /Users/aincc/Works/vicevil4/vicevil4.github.io/_config.yml
   Server running... press ctrl-c to stop.
 ```
 
+## Install Jekyll Theme
+
+```shell
+# download theme
+> git clone https://github.com/Sylhare/Type-on-Strap.git /path/to/Type-on-Strap
+
+# clear root directory
+> cd /path/to/repository
+> rm XXX ...
+
+# copy theme and bundle install
+> cp -R /path/to/Type-on-Strap/* ./
+> bundle install
+
+# config custom _config.yml
+baseurl: ""
+url: "https://vicevil4.github.io"
+
+# run local server
+> bundle exec jekyll serve
+```
+
 ## 참고
 
-- [1.나만의 블로그 만들기 Git hub blog!! (github.io)](https://supermemi.tistory.com/144)
+- [1. 나만의 블로그 만들기 Git hub blog!! (github.io)](https://supermemi.tistory.com/144)
 - [2. Jekyll 으로 꾸며 보자! (github.io)](https://supermemi.tistory.com/145)
-
+- [3. 깃헙 블로그에 Hydejack 테마 적용해보기 (github with Jekyll and Hydejack theme)](https://supermemi.tistory.com/146)
+- [jekyll theme - Type-on-Strap](https://github.com/sylhare/Type-on-Strap)
