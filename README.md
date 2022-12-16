@@ -1,6 +1,6 @@
 # vicevil4.github.io
 
-## Install jekyll
+## Install Jekyll
 
 ruby & jekyll 설치하기
 
@@ -77,6 +77,37 @@ url: "https://vicevil4.github.io"
 
 # run local server
 > bundle exec jekyll serve
+```
+
+## Type-on-Strap Theme Structure
+
+```shell
+Type-on-Strap
+├── _includes                # Theme includes
+├── _layouts                   # Theme layouts (see below for details)
+├── _portfolio                # Collection of articles for the portfolio page
+├── _posts                     # Blog posts
+├── _sass                      # Sass partials (compiled into css at runtime)
+├── assets
+|  ├── js                # JS compiled for distribution + raw sources
+|  ├── css                     # CSS compiled for distribution
+|  ├── fonts         # Font-Awesome, and other fonts
+|  └── img         # Images used for the template
+├── pages
+|   ├── 404.md         # To be displayed when url is wrong
+|   ├── about.md               # About example page
+|   ├── gallery.md             # Gallery page for your photos
+|   ├── portfolio.md        # Portfolio page for your projects
+|   ├── search.md        # Search page
+|   └── tags.md                # The tag page
+├── _config.yml                # sample configuration
+├── _data.yml
+|  ├── authors.yml             # Update the post authors configurations 
+|  ├── language.yml            # Localization configuration
+|  ├── biblio.yml              # To create a reference bibliography
+|  ├── social.yml              # Social configurations to share posts (RSS, shares, ...)
+|  └── icons.yml               # Footer icons (Twitter, Github, Stackoverflow, ...)
+└── index.html                 # sample home page (blog page paginated)
 ```
 
 ## 참고
